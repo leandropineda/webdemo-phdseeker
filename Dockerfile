@@ -1,10 +1,10 @@
 FROM ubuntu:14.04
-MAINTAINER Milton Pividori <miltondp@gmail.com>
+MAINTAINER Leandro Pineda <leandropineda.lp@gmail.com>
 
 # Web Demo Builder - Base Docker image for Python 2.x
 
 ENV python_env="/python_env"
-ENV http_proxy="http://192.168.0.120:3128"
+#ENV http_proxy="http://192.168.0.120:3128"
 
 # Install base packages
 RUN DEBIAN_FRONTEND=noninteractive \
@@ -47,7 +47,6 @@ RUN install_python_module cvxopt==1.1.8
 RUN install_python_module pyyaml==3.12
 
 RUN ln -s ${python_env}/bin/python /usr/local/bin/python
-
 
 # Create a new user "developer".
 # It will get access to the X11 session in the host computer
