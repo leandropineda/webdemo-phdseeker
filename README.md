@@ -1,7 +1,7 @@
-# Virtual environment for Python 2.7 #
+# Virtual environment for PhDSeeker based on Python 2.7 #
 
 ## Description ##
-This is a Docker image with Python 2.7. The Python version is the one included in Ubuntu 14.04. In addition, it contains several Python packages installed (you can get more details by inspecting the [Dockerfile](https://bitbucket.org/sinc-lab/webdemo-base-python2/src/default/Dockerfile)):
+This is a Docker image with Python 2.7. The Python version is the one included in Ubuntu 14.04. In addition, it contains several Python packages installed (you can get more details by inspecting the [Dockerfile](https://github.com/leandropineda/webdemo-phdseeker/blob/master/Dockerfile)):
 
 ## Web demo builder ##
 This Docker image is also used by the Web demo builder as the Python 2 *virtual environment*. You don't need to download it or use it directly from here, just use the Web demo builder interface, select the Python programming language and this virtual environment will be automatically used.
@@ -12,7 +12,7 @@ If you want to use this image as your virtual environment for your Python 2 code
     #!bash
     sudo docker run -ti -e DISPLAY=$DISPLAY -e uid=$UID \
       -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-      sinclab/webdemo-base-python2
+      lpineda/webdemo-phdseeker
 
 Once inside the container, you will see a shell prompt like this:
 
